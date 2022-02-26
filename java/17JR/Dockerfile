@@ -38,7 +38,7 @@ WORKDIR     /home/container
 RUN			curl -O http://dl.zeroturnaround.com/jrebel-stable-nosetup.zip \
 			&& unzip jrebel-stable-nosetup.zip
 
-ENV JAVA_OPTS="-agentpath:/home/container/libjrebel64.so -Drebel.remoting_plugin=true -Drebel.log.file=/home/container/jrebel.log"
+ENV			JAVA_OPTS="-agentpath:/home/container/jrebel/bin/libjrebel64.so -Drebel.remoting_plugin=true -Drebel.log.file=/home/container/jrebel.log"
 
 
 COPY        ./../entrypoint.sh /entrypoint.sh
